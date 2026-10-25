@@ -6,9 +6,7 @@ import { useAuth } from "@/context/AuthContext";
 const LINKS = [
   { href: "/itineraryPlanner", label: "Plan my trip", isRoute: true },
   { href: "/translator", label: "Translator", isRoute: true },
-  { href: "#places", label: "Places", isRoute: false },
   { href: "/foodScanner", label: "Food Scanner", isRoute: true },
-  { href: "#love", label: "Why people love it", isRoute: false },
 ];
 
 export function Nav() {
