@@ -76,39 +76,6 @@ Traveling to Japan is a dream for thousands of Indian tourists and students, yet
 
 ---
 
-## 🏗️ System Architecture
-
-```mermaid
-graph TD
-    User([Traveler / Hackathon Judge]) -->|Accesses Web App| WebClient[React 19 + Vite Frontend]
-    
-    subgraph Frontend Layer
-        WebClient --> Nav[Navigation & Route Controller]
-        Nav --> Landing[Editorial Landing Page]
-        Nav --> Planner[Itinerary Planner & PDF Engine]
-        Nav --> FoodUI[AI Food Scanner UI]
-        Nav --> TransUI[Translator & Audio Interface]
-        Nav --> AuthUI[Auth Modal & Demo Mode]
-    end
-
-    subgraph Backend Microservices [FastAPI Server :8000]
-        WebClient -->|REST API Calls| APIRouter[FastAPI Router]
-        APIRouter --> FoodScannerRouter[/food-scanner]
-        APIRouter --> TranslateRouter[/translate]
-        APIRouter --> PrefsRouter[/preferences]
-        APIRouter --> AuthRouter[/auth]
-    end
-
-    subgraph Intelligence & Cloud Services
-        FoodScannerRouter --> OCRService[OCR & Kanji Food Classifier]
-        TranslateRouter --> TranslationEngine[Bilingual Translation Engine]
-        PrefsRouter --> SupabaseDB[(Supabase PostgreSQL)]
-        AuthRouter --> SupabaseAuth[Supabase Auth Service]
-    end
-```
-
----
-
 ## 💻 Tech Stack
 
 | Domain | Technologies Used |
