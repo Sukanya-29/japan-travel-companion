@@ -40,17 +40,6 @@ Traveling to Japan is a dream for thousands of Indian tourists and students, yet
 
 ---
 
-## 👥 Team Details — HackHers
-
-| Avatar | Member | Role | Focus Areas | Contact / GitHub |
-| :---: | :--- | :--- | :--- | :--- |
-| 🌸 | **Participant 1** | **Team Lead & Full-Stack Architect** | System design, Supabase integration, React routing, state sync | [@github-handle](https://github.com) |
-| ⛩️ | **Participant 2** | **Frontend & UI/UX Specialist** | Japanese visual design system, CSS styling, Responsive layouts | [@github-handle](https://github.com) |
-| 🍜 | **Participant 3** | **Backend & AI Engineer** | FastAPI microservices, OCR parsing pipeline, Translation APIs | [@github-handle](https://github.com) |
-| 🚅 | **Participant 4** | **Cultural Researcher & QA Lead** | Dietary taxonomy, Japanese linguistic validation, Etiquette engine | [@github-handle](https://github.com) |
-
----
-
 ## 🌟 Key Features
 
 ### 1. 🔍 AI Food Scanner & Dietary Detective (`/foodScanner`)
