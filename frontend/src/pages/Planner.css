@@ -1,0 +1,866 @@
+/* Planner.css - Travel Planner Form Styling (Unified with App.css) */
+
+.planner-page {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  padding-bottom: 80px;
+}
+
+.planner-hero-section {
+  padding: 85px 7% 75px;
+  background: #efeee7;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.planner-hero-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.planner-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 25px;
+}
+
+.planner-hero-content h1 {
+  font-family: var(--serif);
+  font-size: clamp(38px, 5.5vw, 65px);
+  line-height: 1.18;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 20px 0;
+  letter-spacing: -1.5px;
+}
+
+.planner-hero-content h1 span {
+  color: var(--red);
+  font-style: italic;
+}
+
+.planner-hero-content p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #686a62;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Edit Mode Banner */
+.planner-edit-alert {
+  background: #f1eadc;
+  border: 1px solid #dfd2bc;
+  padding: 14px 20px;
+  max-width: 860px;
+  margin: 25px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: #6e5844;
+  font-size: 11px;
+}
+
+/* Form Container */
+.planner-form-container {
+  max-width: 100%;        
+  width: 100%;
+  margin: 40px 0 0;
+  padding: 0 7%;     
+}
+
+.planner-form-card {
+  background: #fffefa;
+  border: 1px solid var(--line);
+  padding: 50px 6%;    
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 100%;
+}
+
+/* Section Header */
+.planner-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+
+.planner-step-number-badge {
+  width: 38px;
+  height: 38px;
+  background: var(--ink);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.planner-section-header h2 {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 400;
+  margin: 0 0 5px 0;
+  color: var(--ink);
+  letter-spacing: -0.6px;
+}
+
+.planner-section-header p {
+  font-size: 11px;
+  color: #686a62;
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* Sliders and Steppers */
+.planner-controls-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 24px;
+}
+
+.planner-control-card {
+  background: #efeee7;
+  border: 1px solid var(--line);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.planner-control-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.planner-control-top label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #676960;
+  text-transform: uppercase;
+}
+
+.planner-value-tag {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--red);
+  background: white;
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+}
+
+.planner-stepper-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.planner-step-btn {
+  width: 38px;
+  height: 38px;
+  background: white;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.planner-step-btn:hover:not(:disabled) {
+  border-color: var(--red);
+  color: var(--red);
+  background: #f1e5df;
+}
+
+.planner-step-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.planner-range-slider {
+  flex: 1;
+  height: 6px;
+  accent-color: var(--red);
+  cursor: pointer;
+}
+
+/* Destination presets & input */
+.planner-destination-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 15px;
+}
+
+.planner-dest-chip {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 10px 15px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.planner-dest-chip:hover {
+  border-color: var(--red);
+}
+
+.planner-dest-chip.active {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+
+.planner-text-input {
+  width: 100%;
+  min-height: 49px;
+  padding: 0 15px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-family: inherit;
+  color: var(--ink);
+  background: white;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.planner-text-input:focus {
+  border-color: var(--red);
+}
+
+/* Optional Details row */
+.planner-optional-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.planner-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.planner-field-group label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: #686a62;
+  text-transform: uppercase;
+}
+
+.planner-select-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  background: white;
+  font-size: 12px;
+  font-family: inherit;
+  color: var(--ink);
+  outline: none;
+  cursor: pointer;
+}
+
+.planner-select-input:focus {
+  border-color: var(--red);
+}
+
+/* Pace Selector Options */
+.planner-pace-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.planner-pace-card {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.planner-pace-card:hover {
+  border-color: var(--red);
+}
+
+.planner-pace-card.selected {
+  border-color: var(--red);
+  background: #f1e5df;
+}
+
+.planner-pace-card strong {
+  font-size: 12px;
+  color: var(--ink);
+}
+
+.planner-pace-card span {
+  font-size: 10px;
+  color: #686a62;
+  line-height: 1.7;
+}
+
+/* ====================================================
+   INTERESTS & ACTIVITIES CARDS
+   ==================================================== */
+.planner-interests-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.planner-explore-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--red);
+  background: #eddfdc;
+  border: 1px solid var(--line);
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.planner-explore-all-btn:hover {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+
+.planner-interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.planner-interest-card {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 18px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.planner-interest-card:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+}
+
+.planner-interest-card.selected {
+  border-color: var(--red);
+  background: #f1e5df;
+}
+
+.planner-interest-icon {
+  width: 38px;
+  height: 38px;
+  background: #efeee7;
+  color: var(--red);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+
+.planner-interest-card.selected .planner-interest-icon {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+
+.planner-interest-content strong {
+  display: block;
+  font-size: 12px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.planner-interest-content p {
+  font-size: 11px;
+  color: #686a62;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ====================================================
+   FOOD PREFERENCES & DIETARY RESTRICTIONS
+   ==================================================== */
+.planner-dietary-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.planner-dietary-card-btn {
+  flex: 1;
+  min-width: 150px;
+  border: 1px solid var(--line);
+  background: white;
+  padding: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.planner-dietary-card-btn:hover {
+  border-color: var(--red);
+}
+
+.planner-dietary-card-btn.selected {
+  border-color: var(--red);
+  background: #f1e5df;
+}
+
+.planner-dietary-card-btn strong {
+  display: block;
+  font-size: 12px;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.planner-dietary-card-btn span {
+  display: block;
+  font-size: 10px;
+  color: #686a62;
+  line-height: 1.7;
+}
+
+/* Individual Food Choices Matrix */
+.planner-matrix-section {
+  background: #efeee7;
+  border: 1px solid var(--line);
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+.planner-matrix-header {
+  margin-bottom: 15px;
+}
+
+.planner-matrix-header strong {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #676960;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.planner-matrix-header span {
+  font-size: 11px;
+  color: #686a62;
+}
+
+.planner-food-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.planner-food-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid var(--line);
+  padding: 11px 15px;
+}
+
+.planner-food-item-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.planner-eat-avoid-toggle {
+  display: flex;
+  background: #efeee7;
+  border: 1px solid var(--line);
+  padding: 2px;
+}
+
+.planner-toggle-btn {
+  border: none;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 600;
+  color: #686a62;
+  padding: 5px 9px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.planner-toggle-btn.eat.active {
+  background: #3a5838;
+  color: white;
+}
+
+.planner-toggle-btn.avoid.active {
+  background: var(--red);
+  color: white;
+}
+
+.planner-toggle-btn.not_sure.active {
+  background: #b8860b;
+  color: white;
+}
+
+/* Extra dining preferences chips */
+.planner-extra-food-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.planner-extra-chip {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 9px 15px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.planner-extra-chip:hover {
+  border-color: var(--red);
+}
+
+.planner-extra-chip.selected {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+
+/* Allergies Text area */
+.planner-allergies-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.planner-allergies-box label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: #676960;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.planner-allergies-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-family: inherit;
+  color: var(--ink);
+  outline: none;
+  background: white;
+  resize: vertical;
+}
+
+.planner-allergies-input:focus {
+  border-color: var(--red);
+}
+
+/* ====================================================
+   BUDGET PLANNER
+   ==================================================== */
+.planner-budget-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.planner-budget-card {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 24px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.planner-budget-card:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+}
+
+.planner-budget-card.selected {
+  border-color: var(--red);
+  background: #f1e5df;
+}
+
+.planner-budget-tier-title {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.planner-budget-tier-cost {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--red);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.planner-budget-tier-desc {
+  font-size: 11px;
+  color: #686a62;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.planner-budget-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 10px;
+  color: #686a62;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.planner-budget-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Live Budget Estimator Box */
+.planner-estimator-box {
+  background: #efeee7;
+  border: 1px solid var(--line);
+  padding: 24px;
+  margin-top: 20px;
+}
+
+.planner-estimator-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.planner-est-total {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 400;
+  color: var(--red);
+  font-family: var(--serif);
+}
+
+.planner-est-total span {
+  font-size: 11px;
+  color: #686a62;
+  font-weight: 500;
+  margin-left: 6px;
+  font-family: inherit;
+}
+
+/* Submit CTA Section */
+.planner-submit-section {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.planner-create-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  background: var(--red);
+  color: white;
+  border: 1px solid var(--red);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.planner-create-cta-btn:hover:not(:disabled) {
+  background: #922e28;
+  border-color: #922e28;
+  transform: translateY(-2px);
+}
+
+.planner-create-cta-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Generation Loading Modal */
+.planner-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 28, 25, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: grid;
+  place-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.planner-generation-modal {
+  background: #fffefa;
+  border: 1px solid var(--line);
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: modalScaleIn 0.25s ease;
+}
+
+@keyframes modalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.planner-spinner-ring {
+  width: 52px;
+  height: 52px;
+  border: 3px solid rgba(180, 59, 50, 0.15);
+  border-top-color: var(--red);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.planner-generation-modal h3 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 10px 0;
+}
+
+.planner-step-text {
+  font-size: 11px;
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  min-height: 22px;
+}
+
+.planner-progress-track {
+  width: 100%;
+  height: 4px;
+  background: var(--line);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.planner-progress-bar {
+  height: 100%;
+  background: var(--red);
+  transition: width 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .planner-hero-section {
+    padding: 60px 6%;
+  }
+
+  .planner-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .planner-form-container {
+    padding: 0 4%;
+  }
+
+  .planner-form-card {
+    padding: 25px 20px;
+    gap: 35px;
+  }
+
+  .planner-controls-row {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-optional-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-pace-row {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-budget-tiers-grid {
+    grid-template-columns: 1fr;
+  }
+}

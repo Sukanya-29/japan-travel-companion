@@ -1,0 +1,804 @@
+/* ItineraryDetails.css - Premium Editorial Japan Travel Aesthetic (Unified with App.css) */
+
+.itinerary-details-page {
+  --red: #CF3A24;
+  --ink: #1C1917;
+  --paper: #FAF7F2;
+  --line: #E8E2D5;
+  --muted: #78716C;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  padding-bottom: 80px;
+}
+
+/* ====================================================
+   TOP OVERVIEW HERO
+   ==================================================== */
+.itinerary-hero-section {
+  background: #efeee7;
+  border-bottom: 1px solid var(--line);
+  padding: 85px 7% 65px;
+}
+
+.itinerary-hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.itinerary-breadcrumb-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.itinerary-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: #57534E;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.itinerary-back-link:hover {
+  color: var(--red);
+}
+
+.itinerary-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+.itinerary-title-block {
+  margin-bottom: 30px;
+}
+
+.itinerary-title-block h1 {
+  font-family: var(--serif);
+  font-size: clamp(38px, 5.5vw, 65px);
+  line-height: 1.18;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 20px 0;
+  letter-spacing: -1.5px;
+}
+
+.itinerary-title-block h1 span {
+  color: var(--red);
+  font-style: italic;
+}
+
+.itinerary-title-block p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #686a62;
+  max-width: 540px;
+  margin: 0;
+}
+
+/* Key Stats Bar */
+.itinerary-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.itinerary-stat-card {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.itinerary-stat-card:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+}
+
+.itinerary-stat-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #676960;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.itinerary-stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  font-family: var(--serif);
+}
+
+.itinerary-stat-sub {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.itinerary-stat-card.highlight {
+  background: #f1e5df;
+  border-color: var(--red);
+}
+
+.itinerary-stat-card.highlight .itinerary-stat-value {
+  color: var(--red);
+}
+
+/* Action Buttons Bar */
+.itinerary-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.itinerary-action-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+:root {
+  --red: #CF3A24;
+  --ink: #1C1917;
+  --paper: #FAF7F2;
+  --line: #E8E2D5;
+  --muted: #78716C;
+}
+
+.itinerary-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border: 1px solid #CF3A24;
+  background: #CF3A24;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(207, 58, 36, 0.25);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.itinerary-btn-primary:hover {
+  background: #b7331f;
+  border-color: #b7331f;
+  transform: translateY(-2px);
+}
+
+.itinerary-btn-primary svg {
+  color: #ffffff;
+  stroke: #ffffff;
+}
+
+.itinerary-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 16px 21px;
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.itinerary-btn-secondary:hover {
+  border-color: var(--ink);
+  background: #efeee7;
+}
+
+/* Accommodation Warning Banner */
+.itinerary-notice-banner {
+  background: #f1eadc;
+  border: 1px solid #dfd2bc;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  font-size: 11px;
+  color: #6e5844;
+}
+
+/* ====================================================
+   STICKY DAY JUMP NAV
+   ==================================================== */
+.itinerary-nav-strip {
+  position: sticky;
+  top: 78px;
+  z-index: 900;
+  background: rgba(248, 247, 242, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 7%;
+}
+
+.itinerary-nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.itinerary-nav-container::-webkit-scrollbar {
+  display: none;
+}
+
+.itinerary-day-pills {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.itinerary-day-pill {
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 8px 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.itinerary-day-pill:hover,
+.itinerary-day-pill.active {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+
+.itinerary-nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.itinerary-section-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 14px;
+  transition: all 0.2s ease;
+}
+
+.itinerary-section-pill:hover {
+  color: var(--red);
+  background: #eddfdc;
+}
+
+/* ====================================================
+   MAIN ITINERARY CONTENT LAYOUT
+   ==================================================== */
+.itinerary-main-container {
+  max-width: 1280px;
+  margin: 50px auto 0 auto;
+  padding: 0 7%;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Day Cards Column */
+.itinerary-days-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.itinerary-day-card {
+  background: #fffefa;
+  border: 1px solid var(--line);
+  padding: 35px;
+  scroll-margin-top: 140px;
+  transition: border-color 0.2s ease;
+}
+
+.itinerary-day-card:hover {
+  border-color: var(--red);
+}
+
+.itinerary-day-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.itinerary-day-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.itinerary-day-badge {
+  width: 48px;
+  height: 48px;
+  background: var(--ink);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.itinerary-day-badge span {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.itinerary-day-badge strong {
+  font-size: 16px;
+  line-height: 1;
+  font-family: var(--serif);
+}
+
+.itinerary-day-title-wrap h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  margin: 0 0 5px 0;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.itinerary-day-region {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+
+.itinerary-day-cost-badge {
+  background: #efeee7;
+  border: 1px solid var(--line);
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Activity Items on Timeline */
+.itinerary-activities-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.itinerary-activity-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: #efeee7;
+  border: 1px solid var(--line);
+}
+
+.itinerary-slot-icon {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.itinerary-activity-body {
+  flex: 1;
+}
+
+.itinerary-activity-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.itinerary-slot-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #676960;
+}
+
+.itinerary-category-pill {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--red);
+  background: #eddfdc;
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  letter-spacing: 0.5px;
+}
+
+.itinerary-activity-body h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: var(--ink);
+}
+
+.itinerary-activity-body p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #686a62;
+  margin: 0 0 10px 0;
+}
+
+.itinerary-activity-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Transit Connectors */
+.itinerary-transit-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: white;
+  border: 1px dashed var(--line);
+  margin: -6px 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.itinerary-transit-card svg {
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.itinerary-transit-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.itinerary-transit-mode {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.itinerary-transit-cost {
+  font-weight: 700;
+  color: var(--red);
+  background: #eddfdc;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+}
+
+/* Food Spot Recommendation Card */
+.itinerary-food-card {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itinerary-food-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.itinerary-meal-type {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.itinerary-food-safety-pill {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.itinerary-food-safety-pill.safe {
+  background: #dce5d8;
+  color: #3a5838;
+  border: 1px solid #b5cdb1;
+}
+
+.itinerary-food-safety-pill.caution {
+  background: #f1eadc;
+  color: #6e5844;
+  border: 1px solid #dfd2bc;
+}
+
+.itinerary-food-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.itinerary-food-title strong {
+  font-size: 15px;
+  color: var(--ink);
+  font-family: var(--serif);
+}
+
+.itinerary-food-title span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.itinerary-food-dishes {
+  font-size: 11px;
+  color: #686a62;
+  line-height: 1.8;
+}
+
+.itinerary-food-dishes strong {
+  color: var(--ink);
+}
+
+.itinerary-food-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+}
+
+.itinerary-food-note {
+  color: #6e5844;
+  font-style: italic;
+  max-width: 75%;
+}
+
+.itinerary-maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--red);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.itinerary-maps-link:hover {
+  text-decoration: underline;
+}
+
+/* Weather Backup Card */
+.itinerary-weather-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #efeee7;
+  border: 1px solid var(--line);
+  padding: 12px 16px;
+  font-size: 11px;
+  color: #686a62;
+}
+
+.itinerary-weather-card svg {
+  color: #457b9d;
+  flex-shrink: 0;
+}
+
+/* ====================================================
+   SIDEBAR (BUDGET SUMMARY & TRANSIT CARD)
+   ==================================================== */
+.itinerary-sidebar-column {
+  position: sticky;
+  top: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.itinerary-side-card {
+  background: #fffefa;
+  border: 1px solid var(--line);
+  padding: 25px;
+}
+
+.itinerary-side-card h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.itinerary-budget-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.itinerary-budget-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.itinerary-budget-row span {
+  color: #686a62;
+}
+
+.itinerary-budget-row strong {
+  color: var(--ink);
+}
+
+.itinerary-budget-row.total-row {
+  border-top: 1.5px solid var(--ink);
+  border-bottom: none;
+  padding-top: 12px;
+  font-size: 12px;
+}
+
+.itinerary-budget-row.total-row strong {
+  color: var(--red);
+  font-size: 16px;
+  font-family: var(--serif);
+}
+
+.itinerary-per-person-callout {
+  background: #efeee7;
+  border: 1px solid var(--line);
+  padding: 14px;
+  font-size: 11px;
+  color: #686a62;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.itinerary-per-person-callout strong {
+  color: var(--red);
+  display: block;
+  font-size: 15px;
+  margin-top: 4px;
+  font-family: var(--serif);
+}
+
+/* Transit Tips Card in Sidebar */
+.itinerary-transit-tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 11px;
+  color: #686a62;
+  line-height: 1.8;
+}
+
+.itinerary-transit-tip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.itinerary-transit-tip-item svg {
+  color: var(--red);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .itinerary-main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .itinerary-sidebar-column {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .itinerary-hero-section {
+    padding: 60px 6%;
+  }
+
+  .itinerary-title-block h1 {
+    font-size: 40px;
+  }
+
+  .itinerary-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .itinerary-main-container {
+    padding: 0 6%;
+  }
+
+  .itinerary-day-card {
+    padding: 25px 20px;
+  }
+
+  .itinerary-nav-strip {
+    top: 70px;
+    padding: 10px 6%;
+  }
+}

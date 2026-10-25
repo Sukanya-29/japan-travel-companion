@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary: #CF3A24;
+  --color-primary-hover: #B7331F;
+  --color-primary-foreground: #ffffff;
+  --color-sakura: #F4ACB7;
+  --color-sunrise: #E0533C;
+  --color-gold: #D4AF37;
+  --color-ink: #0F0E0D;
+  --color-ink-foreground: #F5F2EB;
+  --color-ink-muted: #9E9689;
+  --color-on-image: #ffffff;
+  --color-background: #FAF7F2;
+  --color-foreground: #1C1917;
+  --color-muted: #EFEAE1;
+  --color-muted-foreground: #78716C;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #1C1917;
+  --color-border: #E8E2D5;
+  --font-display: 'Shippori Mincho', Georgia, serif;
+  --font-sans: 'Zen Kaku Gothic New', 'DM Sans', sans-serif;
+  --shadow-paper: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+  --shadow-elegant: 0 10px 30px -4px rgba(207, 58, 36, 0.35);
+}
+
+:root {
+  --background: #FAF7F2;
+  --foreground: #1C1917;
+  --primary: #CF3A24;
+  --primary-foreground: #ffffff;
+  --secondary: #F0EBE1;
+  --secondary-foreground: #1C1917;
+  --muted: #EFEAE1;
+  --muted-foreground: #78716C;
+  --accent: #F0EBE1;
+  --accent-foreground: #1C1917;
+  --destructive: #DC2626;
+  --destructive-foreground: #ffffff;
+  --border: #E8E2D5;
+  --input: #E8E2D5;
+  --ring: #CF3A24;
+  --radius: 0.75rem;
+
+  font-family: 'Zen Kaku Gothic New', 'DM Sans', sans-serif;
+  color: #1C1917;
+  background-color: #FAF7F2;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background-color: #FAF7F2;
+  color: #1C1917;
+}
+
+/* Animations and Utilities for Japan Experience Components */
+.vertical-jp {
+  writing-mode: vertical-rl;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 14, 13, 0.15) 0%,
+    rgba(15, 14, 13, 0.35) 50%,
+    rgba(15, 14, 13, 0.85) 100%
+  );
+}
+
+.card-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0) 0%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes ink-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-ink-in {
+  animation: ink-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(115vh) translateX(var(--petal-drift, 40px)) rotate(360deg);
+  }
+}
+
+.animate-petal-fall {
+  animation: petal-fall linear infinite;
+}
