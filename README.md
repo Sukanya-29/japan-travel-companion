@@ -17,7 +17,11 @@
 * **Event**: **Thapar Japan Hackathon**
 * **Organized by**: **TSLAS (Thapar School of Liberal Arts and Sciences), Thapar University, Patiala**
 * **Sponsor & Challenge Partner**: **Hakuhodo Inc. (博報堂)**
-* **Team**: **HackHers** (4 Participants)
+* **Team**: **HackHers** (4 Participants) <br>
+1. Sukanya - DSAI
+2. Smridhi Kaur - DSAI
+3. Balpreet Kaur - ELE
+4. Ramneek Kaur - COPC
 
 ### 🎯 The Hakuhodo Challenge
 **Hakuhodo Inc.**, one of Japan's leading integrated marketing and innovation companies, presented a core challenge centered around **human-centric cross-cultural interaction**:
