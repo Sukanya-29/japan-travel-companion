@@ -94,7 +94,7 @@ Ensure you have the following installed on your machine:
 
 ### 2. Clone Repository
 ```bash
-git clone https://github.com/your-username/nihon-japan-companion.git
+git clone [https://github.com/Sukanya-29/nihon-japan-companion.git](https://github.com/Sukanya-29/nihon-japan-companion.git)
 cd nihon-japan-companion
 ```
 
