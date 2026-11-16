@@ -17,7 +17,9 @@
 * **Event**: **Thapar Japan Hackathon**
 * **Organized by**: **TSLAS (Thapar School of Liberal Arts and Sciences), Thapar University, Patiala**
 * **Sponsor & Challenge Partner**: **Hakuhodo Inc. (博報堂)**
-* **Team**: **HackHers** (4 Participants) <br>
+* **Team**: **HackHers** (4 Participants)
+* **Link**: https://japan-travel-companion-alpha.vercel.app/ <br>
+
 1. Sukanya - DSAI
 2. Smridhi Kaur - DSAI
 3. Balpreet Kaur - ELE
